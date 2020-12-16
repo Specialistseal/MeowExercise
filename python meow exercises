@@ -1,0 +1,116 @@
+import random
+
+# Exercise1: Character Input
+"""
+name = input('What is your name: ')
+age = input('How old are you: ')
+y100 = 100 - int(age)
+message = name + ' you will be 100 years old at the year ' + str(2020 + y100)
+print(message)
+copies = int(input('how many copies would you like? '))
+while copies != 0:
+    print(message)
+    copies -= 1
+"""
+# Exercise4: Divisors
+"""
+num = int(input('pick a number: '))
+divi_list = list(range(1, (num + 1)))
+for x in divi_list:
+    if num % x == 0:
+        print(str(x) + ' is a divisor of ' + str(num))
+"""
+# Exercise5: List Overlap
+"""
+import random
+a = [random.randrange(0, 51, 1) for i in range(0, 20, 1)]
+b = [random.randrange(0, 51, 1) for j in range(0, 20, 1)]
+overlap = []
+for num in a:
+    if num in b and num not in overlap:
+        overlap.append(num)
+print(overlap)
+"""
+# Exercise6: String Lists
+"""
+s = "malayalam"
+if s.reverse() == s:
+    print('is a palindrome')
+else:
+    print('not a plindrome')
+"""
+# Exercise7: List Comprehensions
+"""
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+b = [i for i in a if i % 2 == 0]
+print(b)
+"""
+# Exercise8: Rock Paper Scissors
+"""
+Options = ['Rock', 'Paper', 'Scissors']
+
+while True:
+    rng = random.randrange(0, 2)
+    again = ''
+    player = int(input('Choose: [0]rock, [1]paper or [2]scissors.\n'))
+    player = Options[player]
+    player2 = Options[rng]
+
+    if player == 'Rock' and player2 == 'Scissors':
+        print(player + ' vs ' + player2 + '\nyou win!')
+        again = input('try again? (y/n)')
+        if again == 'n':
+            break
+    elif player == 'Paper' and player2 == 'Rock':
+        print(player + ' vs ' + player2 + '\nyou win!')
+        again = input('try again? (y/n)')
+        if again == 'n':
+            break
+    elif player == 'Scissors' and player2 == 'Paper':
+        print(player + ' vs ' + player2 + '\nyou win!')
+        again = input('try again? (y/n)')
+        if again == 'n':
+            break
+    elif player == player2:
+        print(player + ' vs ' + player2 + '\ntry again')
+    else:
+        print(player + ' vs ' + player2 + '\nLoser')
+        again = input('try again? (y/n)')
+        if again == 'n':
+            break
+"""
+# Exercise9: Guessing Game One
+"""
+rng = random.randrange(1, 10)
+print('i have picked anumber from one to ten')
+count = 0
+guess = 0
+
+while guess != rng and guess != 'exit':
+    guess = input('would you like to guess what it is? \n')
+    if guess == 'exit':
+        print("you are not fun")
+        break
+
+    guess = int(guess)
+    count += 1
+    if guess < rng:
+        print('too low')
+    elif guess > rng:
+        print('too high')
+    else:
+        print('big winner')
+        print("it took you ", count, "tries")
+"""
+# Exercise10: List Overlap Comprehensions
+"""
+a = [random.randrange(1, 26) for i in range(0, 10)]
+b = [random.randrange(1, 26) for n in range(0, 13)]
+overlap =[]
+for num in a and b:
+    if num in a and num in b and num not in overlap:
+        overlap.append(num)
+print(a)
+print(b)
+print(overlap)
+"""
