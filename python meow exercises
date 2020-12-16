@@ -12,6 +12,34 @@ while copies != 0:
     print(message)
     copies -= 1
 """
+# Exercise2: Odd or Even
+"""
+num = int(input('pick a number: '))
+if num % 4 == 0:
+    print("The number is dividable by 4")
+elif num % 2 == 0:
+    print("The number is Even")
+else:
+    print("The number is Odd")
+"""
+# Exercise2: Odd or Even, Extra2
+"""
+num = int(input('pick a number: '))
+check = int(input('pick a divider: '))
+if num % check == 0:
+    print("The numbers divide Evenly")
+else:
+    print('The numbers divide Oddly')  # yes i know thats a typo but it made me chuckle... Meow
+"""
+#Exercise3: List Less Than Ten
+"""
+my_list = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+new_list = []
+for num in my_list:
+    if num <= 5:
+        new_list.append(num)
+print(new_list)
+"""
 # Exercise4: Divisors
 """
 num = int(input('pick a number: '))
